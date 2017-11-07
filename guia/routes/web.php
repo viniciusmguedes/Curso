@@ -14,12 +14,32 @@ Dusterio\LumenPassport\LumenPassport::routes($router);
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1', 'middleware' => ['auth']], function () use ($router){
+$router->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1'], function () use ($router){
+    $router->get('restaurants/by-address', 'RestaurantsController@getByAddress');
+});
+$router->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1', 'middleware' => ['auth', 'cors']], function () use ($router){
     $router->get('restaurants', 'RestaurantsController@index');
-    $router->get('restaurants/{id}', 'RestaurantsController@show');
+    $router->get('restaurants/{id:[0-9]+}', 'RestaurantsController@show');
     $router->post('restaurants', 'RestaurantsController@store');
-    $router->put('restaurants/{id}', 'RestaurantsController@update');
-    $router->post('restaurants/{id}', 'RestaurantsController@update');
-    $router->delete('restaurants/{id}', 'RestaurantsController@destroy');
+    $router->put('restaurants/{id:[0-9]+}', 'RestaurantsController@update');
+    $router->post('restaurants/{id:[0-9]+}', 'RestaurantsController@update');
+    $router->delete('restaurants/{id:[0-9]+}', 'RestaurantsController@destroy');
+
+    $router->post('restaurants/{id:[0-9]+}/address', 'RestaurantsController@address');
+    $router->post('restaurants/{id:[0-9]+}/upload', 'RestaurantsController@upload');
+
+    $router->get('restaurants/{id:[0-9]+}/photos', 'RestaurantPhotosController@index');
+    $router->post('restaurants/photos', 'RestaurantPhotosController@store');
+    $router->delete('restaurants/photos/{id:[0-9]+}', 'RestaurantPhotosController@destroy');
+
+    $router->get('products', 'ProductsController@index');
+    $router->get('products/{id:[0-9]+}', 'ProductsController@show');
+    $router->post('products', 'ProductsController@store');
+    $router->post('products/{id:[0-9]+}', 'ProductsController@update');
+    $router->delete('products/{id:[0-9]+}', 'ProductsController@destroy');
+
     $router->get('auth/me', 'AuthController@me');
+    $router->post('auth/change-password', 'AuthController@changePassword');
+    $router->post('auth/edit-profile', 'AuthController@editProfile');
+    $router->get('auth/logout', 'AuthController@logout');
 });

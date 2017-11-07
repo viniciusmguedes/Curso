@@ -67,8 +67,8 @@ trait ApiControllerTrait
     }
     protected function relationships()
     {
-        if(isset($this->relationships)) {
-            return $this->relationships();
+        if (isset($this->relationships)) {
+            return $this->relationships;
         }
         return [];
     }

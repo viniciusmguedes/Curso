@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Address;
 use Illuminate\Database\Eloquent\Model;
 
 class Restaurant extends Model
@@ -15,5 +16,9 @@ class Restaurant extends Model
         } else {
             return null;
         }
+    }
+    public function address()
+    {
+        return $this->hasOne(\App\Address::class);
     }
 }
