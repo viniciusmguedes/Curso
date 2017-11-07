@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c510ffd-220e-4e57-9944-3f69fcae395a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-painel" afterPath="$PROJECT_DIR$/rest-painel" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-painel/src/app/app.component.html" afterPath="$PROJECT_DIR$/rest-painel/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-painel/src/app/app.component.ts" afterPath="$PROJECT_DIR$/rest-painel/src/app/app.component.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,8 +52,8 @@
       <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="784">
+              <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -406,12 +404,12 @@
       <option name="presentableId" value="Default" />
       <updated>1508393747003</updated>
       <workItem from="1508393751720" duration="44387000" />
-      <workItem from="1508884764195" duration="66500000" />
+      <workItem from="1508884764195" duration="66542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110887000" />
+    <option name="totallyTimeSpent" value="110929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="735" y="23" width="1185" height="977" extended-state="0" />
@@ -920,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        <state relative-caret-position="784">
+          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="30" />
           <folding />
         </state>
       </provider>
