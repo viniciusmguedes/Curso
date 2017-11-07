@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c510ffd-220e-4e57-9944-3f69fcae395a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-painel" afterPath="$PROJECT_DIR$/rest-painel" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-painel/src/app/app.module.ts" afterPath="$PROJECT_DIR$/rest-painel/src/app/app.module.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/rest-painel/src/app/restaurants/components/edit.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -49,12 +50,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="30" />
+            <state relative-caret-position="616">
+              <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="1" column="30" lean-forward="true" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,18 +102,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppServiceProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guia/app/Providers/AppServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <element signature="e#33#49#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RestaurantsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/guia/app/Http/Controllers/Api/V1/RestaurantsController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,18 +120,6 @@
             <state relative-caret-position="140">
               <caret line="5" column="76" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="76" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Restaurant.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guia/app/Restaurant.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding>
-                <element signature="e#22#38#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,7 +147,6 @@
         <option value="$PROJECT_DIR$/rest-painel/src/app/restaurants/products/new-product.component.ts" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/restaurants/products/edit-product.component.html" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/restaurants/restaurant.module.ts" />
-        <option value="$PROJECT_DIR$/rest-painel/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/restaurants/components/products/edit-product.component.ts" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/restaurants/components/products.component.ts" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/restaurants/components/products/new-product.component.ts" />
@@ -191,6 +189,7 @@
         <option value="$PROJECT_DIR$/guia/app/Observers/AddressObserver.php" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/rest-painel/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/rest-painel/src/app/app.module.ts" />
       </list>
     </option>
   </component>
@@ -404,12 +403,12 @@
       <option name="presentableId" value="Default" />
       <updated>1508393747003</updated>
       <workItem from="1508393751720" duration="44387000" />
-      <workItem from="1508884764195" duration="66542000" />
+      <workItem from="1508884764195" duration="66970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110929000" />
+    <option name="totallyTimeSpent" value="111357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="735" y="23" width="1185" height="977" extended-state="0" />
@@ -476,16 +475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rest-painel/src/app/user/user.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/guia/app/Http/Controllers/Api/V1/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
@@ -815,7 +804,7 @@
         <state relative-caret-position="196">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
-            <element signature="e#22#38#0#PHP" expanded="true" />
+            <element signature="e#22#38#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -893,18 +882,8 @@
     <entry file="file://$PROJECT_DIR$/rest-painel/src/app/restaurants/components/edit.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,9 +897,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="30" />
+        <state relative-caret-position="616">
+          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="30" lean-forward="true" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-painel/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
