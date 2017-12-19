@@ -1,0 +1,60 @@
+<!-- <ion-header>
+  <ion-navbar align-title="center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>iMarket</ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-slides pager autoplay="7000" loop="true" speed="2000">
+
+    <ion-slide style="background-color: white">
+      <img src="assets/banner.png" style="width: 60vh">
+    </ion-slide>
+
+    <ion-slide style="background-color: blue">
+      <img src="assets/banner2.gif" style="width: 60vh">
+    </ion-slide>
+
+    <ion-slide style="background-color: red">
+      <img src="assets/banner3.png" style="width: 60vh">
+    </ion-slide>
+
+  </ion-slides>
+*/ -->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Buscar restaurantes</h3>
+
+  <ion-item>
+    <ion-label floating>Endereço</ion-label>
+    <ion-input type=search></ion-input>
+  </ion-item>
+
+  <div *ngIf="status === 'success'">
+    <ion-card *ngFor="let address of restaurants" (click)="touch(address)">
+      <ion-card-header>{{ address.restaurant.name }}</ion-card-header>
+      <ion-card-content>{{ address.restaurant.description }}</ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="list.length > 0">
+    <h4>Favoritos</h4>
+
+    <ion-card *ngFor="let data of list" (click)="touch(data)">
+      <ion-card-header>{{ data.restaurant.name }}</ion-card-header>
+      <ion-card-content>{{ data.restaurant.description }}</ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+

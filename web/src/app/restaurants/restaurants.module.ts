@@ -4,9 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { RestaurantComponent } from './components/restaurant.component';
+import { RestaurantDescribeComponent } from './components/restaurant-describe.component';
+
 const appRoutes: Routes = [
-    {path: 'search', component: RestaurantComponent}
-]
+    {path: 'search', component: RestaurantComponent},
+    {path: 'restaurant/:id', component: RestaurantDescribeComponent}
+];
+
 @NgModule({
     imports: [
         CommonModule,
@@ -15,6 +19,7 @@ const appRoutes: Routes = [
     ],
     declarations: [
         RestaurantComponent,
+        RestaurantDescribeComponent
     ]
 })
 export class RestaurantsModule {}

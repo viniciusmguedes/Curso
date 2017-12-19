@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { environment } from '../environments/environment';
-import { Router } from '@angular/router';
+import { AlertController } from 'ionic-angular';
+import { Events } from 'ionic-angular';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -10,7 +10,7 @@ export class AppHttpService {
     protected url: string;
     protected header: Headers;
 
-    constructor (protected http: Http, private router: Router) {
+    constructor (protected http: Http, private alertCtrl: AlertController, public eventEmitter: Events) {
         this.setAccessToken();
     }
 
@@ -24,7 +24,7 @@ export class AppHttpService {
     }
 
     builder (resource: string) {
-        this.url = environment.server_url + '/api/v1/' + resource;
+        this.url = 'http://localhost:8000/api/v1/' + resource;
         return this;
     }
 
@@ -49,7 +49,7 @@ export class AppHttpService {
         return this.toPromise(observable);
     }
 
-    update(id: number, data: object) {
+    update(id: number, data: Object) {
         let observable = this.http.put(this.url + '/' + id, data, {headers: this.header})
         return this.toPromise(observable);
     }
@@ -73,7 +73,6 @@ export class AppHttpService {
                 let message = 'Algo deu errado no servidor, informe o erro ' + err.status + ' ao administrador';
                 if (err.status === 401) {
                     message = 'Você não tem permissão para ver isso, informe um usuário e senha válidos';
-                    this.router.navigate(['/login']);
                 }
 
                 if (err.status === 422) {
@@ -84,7 +83,7 @@ export class AppHttpService {
                     message = 'Impossível se conectar ao servidor, verifique sua conexão ou tente novamente em alguns minutos';
                 }
 
-                window.Materialize.toast(message, 3000, 'red');
+                this.showAlert(message);
                 return err;
             });
     }
@@ -105,5 +104,20 @@ export class AppHttpService {
         }
 
         return null;
+    }
+    protected showAlert(message) {
+        let prompt = this.alertCtrl.create({
+            title: 'Algo deu errado',
+            message: message,
+            buttons: [
+                {
+                    text: 'ok',
+                    handler: data => {
+                        console.log('Btn "ok" in Alert control clicked');
+                    }
+                }
+            ]
+        });
+        prompt.present();
     }
 }
