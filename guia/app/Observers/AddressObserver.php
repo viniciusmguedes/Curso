@@ -1,20 +1,20 @@
 <?php
-namespace App\observers;
+namespace App\Observers;
 use App\Address;
 use AnthonyMartin\GeoLocation\GeoLocation;
 class AddressObserver
 {
     public function creating(Address $model)
     {
-        if(!$model->latitude or $model->logitude){
-            $this->setLatAndLog($model);
+        if (!$model->latitude or $model->longitude) {
+            $this->setLatAndLong($model);
         }
     }
     public function updating(Address $model)
     {
-        $this->setLatAndLog($model);
+        $this->setLatAndLong($model);
     }
-    private function setLatAndLog($model)
+    private function setLatAndLong($model)
     {
         $location = $model->address . ',' .
             $model->number . ' - ' .
@@ -22,8 +22,8 @@ class AddressObserver
             $model->city . ' - ' .
             $model->state . ' - ' .
             $model->address;
-        $response = GeoLocation::getGeocodeFromGoogle($location);
 
+        $response = GeoLocation::getGeocodeFromGoogle($location);
         if (!empty($response->results) and is_array($response->results)) {
             $result = array_pop($response->results);
             $model->latitude = $result->geometry->location->lat;

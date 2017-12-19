@@ -12,12 +12,15 @@
 
 Dusterio\LumenPassport\LumenPassport::routes($router);
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    //return $router->app->version();
+    return view ('teste');
 });
 $router->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1'], function () use ($router){
     $router->get('restaurants/by-address', 'RestaurantsController@getByAddress');
+    $router->post('restaurants/vote', 'VotesController@store');
+    $router->get('restaurants/{id:[0-9]+}/view-phone', 'RestaurantsController@viewPhone');
 });
-$router->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1', 'middleware' => ['auth', 'cors']], function () use ($router){
+$router->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1', 'middleware' => ['auth']], function () use ($router){
     $router->get('restaurants', 'RestaurantsController@index');
     $router->get('restaurants/{id:[0-9]+}', 'RestaurantsController@show');
     $router->post('restaurants', 'RestaurantsController@store');

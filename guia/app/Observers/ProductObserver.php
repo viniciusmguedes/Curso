@@ -1,6 +1,6 @@
 <?php
 namespace App\Observers;
-
+use App\Offer;
 use App\Product;
 
 class ProductObserver
@@ -9,7 +9,6 @@ class ProductObserver
 
     protected $field = 'photo';
     protected $path = 'products/';
-
     public function creating(Product $model)
     {
         $this->sendFile($model);

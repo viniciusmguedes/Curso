@@ -19,11 +19,11 @@
         formData.append('description', 'Melhor Wiski da região');
         formData.append('photo', $('#file')[0].files[0]);
         let headers = {
-            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjBkOTllYzVlMDJiNmUzODE2ZGY4ODg1YzRhN2JlMTU4MDY4M2IxODlhNTllNTg5NmZlOGExY2YxYTZlNjQ1ZWUwYmMzMWJkNDQ2ZDRjOTYyIn0.eyJhdWQiOiIzIiwianRpIjoiMGQ5OWVjNWUwMmI2ZTM4MTZkZjg4ODVjNGE3YmUxNTgwNjgzYjE4OWE1OWU1ODk2ZmU4YTFjZjFhNmU2NDVlZTBiYzMxYmQ0NDZkNGM5NjIiLCJpYXQiOjE1MDgzODYxMTYsIm5iZiI6MTUwODM4NjExNiwiZXhwIjoxNTM5OTIyMTE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NWk-VKsKSLV0WZeuCxmIhp7PFG0ZDhYLhLHQHGSRnIlmUpeqXt5eRnHPZh5pCoz0nNs-VY4raNmGiPeLNgVGC17khP7vW81Em51JFTGGP1tu_RCZWjVcGFkMCoJJ1umvNYn7EvyoBOS1OYupDyyjTni_haGM0d_8MC1Hf1kJSJJZvXwwmX8_dEk3i_TizZZnb1_WitV2cN230k3iKnVto3CLATd58-sFCmiyw59pCbuou6c6kTUAJ_iwcuwKL9Q6Ama2Hohim0DT4J95aiigxsmeGxqu0ownRCAiiReLtxJmPFb1llE1kuYBJkq98mHzf4DAv44UE_FCifuYpRrSA2ll7yu3AoiRN8xLx8HlOrBYPo6CrjcOHYiWIRd-VgPWjWA3VdGxAN5PlKYWyAGEseu92NXwRsM7vYA58AQ7HQbPhwrOwWag_k_zMHNZdGBwNGfOuvld7v_f6Y53EX0UqYl68zSubrxdM_41-RUW3L-G30EeJblnSP-dvvxhpPTAKM2Z3e4Rhjn-SibQjAcmELpYTaSyu4qS_Jvn4Lc6_VOMn3Fy7Q5idPpaIcLM4WU0KKWhBnWUvB9MHkujNdaXvk3KnAP9lIVvvz6D9xo0wIZqnMhykar_-_iKLIYRbruepIYNRubSzsuZThz8_8uBm9wbz-Bw4sVxtowivNkauYI',
+            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjY5ODczMzZlZDk3OWM5ZDQ0ZjBhZTYwMzg2MzRiMGM0MDUwMGVjMTlhMTVmZjI3YWQ2NGFmOTQ0NmVlYjRmZjhhODUzMWIwMmQ0MzA1OThiIn0.eyJhdWQiOiIyIiwianRpIjoiNjk4NzMzNmVkOTc5YzlkNDRmMGFlNjAzODYzNGIwYzQwNTAwZWMxOWExNWZmMjdhZDY0YWY5NDQ2ZWViNGZmOGE4NTMxYjAyZDQzMDU5OGIiLCJpYXQiOjE1MTM0OTE3MTQsIm5iZiI6MTUxMzQ5MTcxNCwiZXhwIjoxNTQ1MDI3NzE0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.c2jtyz3_GZmeEmDDE2f9nj29JYQ0WXz47hyYvKdN2pfiZZi-7fkH8qJFjQaMST0p_R8RuDZQUPl7fjdCyBKOAyF3nU2qVA29VOh29i_ckDp0luAJDdFcIY8IA1oOtcT_c2JnmRfFeh1TsLYpUouy-PL8LhRjtw4ChOYHUpzp38-2Ka91EJVysn2X9HMfgGfnJVNS6aNdSSmQ2AmU0l27PNDSEkBPT3Jy3t6G74LevK1uF_8gI_BOpOMCgylzOfzBN_cI-AEd0WnL0qiWCOb9gLubWSBHiubH5pf3-PQ-Nj1LvV_MzmrJL9USxfWmFk0WYY0NZ1rnsXH8-um1ncPDdJ34uKfFXRlDki8qWLqbwI6ArykKq2WT67vQUNOptjAXqYmgbwpFTXTTE8ODjjw5Yb6LxV_V0SpCygL2uKNNwevIqv0kv9xnb2H9pjoKunPpXfb7ewQQ1jfN_9cM4k0Kg9wvNok_UTjRIVTS7BFOU6Wl_hgVD4IZjquoZLBOg2yKzOc1_uQPd8kTgJbIjVhEqFeS5YJQ38trwqduXr7O68YNSYJ-QVq4TI7kz_aNSCaZVgzeqry8pCSahOhwqwsvqR6YLxpui4UArF_qB0l6Xi5iR7gR27b0u6VOEdzyVxxmSzPg2PcRz_V_ZotuJX4KhfP2vKuZbflbnDqcUQlrHc8',
             //'content-type': 'multipart/form-data'
             'content-type': 'application/x-www-form-urlencoded'
         }
-        axios.post('http://localhost:8000/api/v1/restaurants/3', formData, {headers: headers})
+        axios.post('http://localhost:8000/api/v1/restaurants/1', formData, {headers: headers})
     })
 </script>
 </body>

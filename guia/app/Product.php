@@ -16,4 +16,8 @@ class Product extends Model
             return null;
         }
     }
+    public function Offer()
+    {
+        return $this->hasOne(\App\Offer::class);
+    }
 }

@@ -25,6 +25,17 @@ class RestaurantsController extends Controller
         $this->model = $model;
     }
 
+    public function store(Request $request)
+    {
+        $this->authorize('create', Restaurant::class);
+        $this->validate($request, $this->rules ?? [], $this->messages ?? []);
+        $data = $request->all();
+        $data['user_id'] = $request->user()->id;
+
+        $result = $this->model->create($data);
+        return response()->json($result);
+    }
+
     public function address(Request $request, $id)
     {
         $restaurant = $this->model->findOrFail($id);
@@ -68,5 +79,31 @@ class RestaurantsController extends Controller
         }
         $status = 'error';
         return compact('status');
+    }
+    public function viewPhone(Request $request, $id)
+    {
+        /**
+         * $request->ip();
+         **/
+        $restaurant = $this->model->findOrFail($id);
+        $restaurant->phone_count = $restaurant->phone_count + 1;
+        $restaurant->update();
+        return ['status'=>'success'];
+    }
+    public function getByCoords(Request $request)
+    {
+        $limit_km = $request->input('limit') ?? 10;
+        $latitude = $request->input('latitude');
+        $longitude = $request->input('longitude');
+        $restaurants = Address::select(\DB::raw("id, latitude, longitude, restaurant_id, ( 6371 * acos( cos( radians({$latitude}) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians({$longitude}) ) + sin( radians({$latitude}) ) * sin( radians( latitude ) ) ) ) AS distance"))
+            ->orderBy('distance')
+            ->having('distance', '<=', $limit_km)
+            ->having('restaurant_id', '>', 0)
+            ->limit(20)
+            ->with(['restaurant'])
+            ->get();
+
+        $status = 'success';
+        return compact('restaurants', 'latitude', 'longitude', 'status');
     }
 }
